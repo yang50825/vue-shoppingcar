@@ -37,7 +37,12 @@ export default {
   },
   created() {
     this.$axios({
+      method: 'POST',
       url: '/api/goods/queryGoodsList',
+      params: {},
+      data: {
+        goodsName: '',
+      },
     }).then((res) => {
       //   console.log(res)
       this.list = res.data.data
