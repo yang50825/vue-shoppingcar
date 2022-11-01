@@ -22,6 +22,7 @@ export default {
     obj: {
       deep: true,
       handler() {
+        // 如果输入框数量为负数，设置为1
         if (this.obj.goodsCount < 0) {
           this.obj.goodsCount = 1
         }
